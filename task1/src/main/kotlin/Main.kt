@@ -1,12 +1,10 @@
 import kotlin.math.sqrt
 
-fun main() {
-    PushTask().main()
-}
 abstract class Push {
     var text: String? = null
     var type: String? = null
-
+    abstract fun newInstance(params: Map<String, String>): Push
+    abstract fun filter(system: AppSystem): Boolean
     companion object {
         internal const val TEXT_FIELD_NAME = "text"
         internal const val TYPE_FIELD_NAME = "type"
@@ -18,9 +16,6 @@ abstract class Push {
         internal const val DATE_FIELD_NAME = "expiry_date"
         internal const val OSVERSION_FIELD_NAME = "os_version"
     }
-
-    abstract fun newInstance(params: Map<String, String>): Push
-    abstract fun filter(system: AppSystem): Boolean
 }
 
 class GenderPush() : Push(){
@@ -181,9 +176,9 @@ class PushTask {
 
     private fun getParam(countParam: Int): MutableMap<String, String> {
         val params: MutableMap<String, String> = mutableMapOf()
-        for (i in 1..countParam){
-            val param: List<String> = readLine().toString().split(" ")
-            params[param[0]] = param[1]
+        repeat(countParam) {
+            val (key, value) = readLine()!!.split(" ")
+            params[key] = value
         }
         return params
     }
@@ -197,8 +192,8 @@ class PushTask {
         for (i in 1..countPush){
             val countParam: Int = readLine().toString().toInt()
             val pushParam: MutableMap<String, String> = getParam(countParam)
-
             val nameType = pushParam["type"]
+
             val push = pushTypes[nameType]!!.newInstance(pushParam)
 
             if (push.filter(appSystem)){
@@ -207,8 +202,11 @@ class PushTask {
             }
         }
 
-        if (answer.size == 0){
-            println(-1)
-        }
+        if (answer.size == 0) println(-1)
+
     }
+}
+
+fun main() {
+    PushTask().main()
 }
