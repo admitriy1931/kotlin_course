@@ -1,0 +1,32 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color bright_blue
+color dark_blue
+color light
+color normal_blue
+color white
+drawable button_backround_normal
+drawable button_backround_pressed
+drawable button_backround_selector
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id button
+id button3
+id num_text_view
+id num_text_view3
+id textView
+id textView2
+layout activity_main
+layout activity_second
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string button_text
+string first_activity_text
+string num
+string second_activity_text
+style Base.Theme.DoubleTappTask
+style Theme.DoubleTappTask
+xml backup_rules
+xml data_extraction_rules

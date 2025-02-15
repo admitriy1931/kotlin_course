@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DoubleTappTask</string>
+    <string name="num">0</string>
+    <string name="button_text">Переключиться</string>
+    <string name="first_activity_text">Main Activity</string>
+    <string name="second_activity_text">Second Activity</string>
+</resources>

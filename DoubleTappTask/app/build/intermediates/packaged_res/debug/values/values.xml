@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="bright_blue">#22D1EE</color>
+    <color name="dark_blue">#0D153A</color>
+    <color name="light">#E1F3F5</color>
+    <color name="normal_blue">#6F7CB9</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">DoubleTappTask</string>
+    <string name="button_text">Переключиться</string>
+    <string name="first_activity_text">Main Activity</string>
+    <string name="num">0</string>
+    <string name="second_activity_text">Second Activity</string>
+    <style name="Base.Theme.DoubleTappTask" parent="Theme.AppCompat.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.DoubleTappTask" parent="Base.Theme.DoubleTappTask"/>
+</resources>
